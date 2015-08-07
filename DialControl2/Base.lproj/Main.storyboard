@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVN-xH-YP2" userLabel="DialUI View 1" customClass="DialUIView">
+                                <rect key="frame" x="40" y="100" width="200" height="200"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="pie01.png" translatesAutoresizingMaskIntoConstraints="NO" id="cZv-Is-OUW">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OHg-E1-vqp"/>
+                                    <constraint firstAttribute="height" constant="200" id="Y6V-pc-Chs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="background" destination="cZv-Is-OUW" id="asa-2T-zbO"/>
+                                    <outlet property="dialUIView_delegate" destination="BYZ-38-t0r" id="OzR-LE-2oz"/>
+                                </connections>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-ff-Ulp" userLabel="DialUI View 2" customClass="DialUIView">
+                                <rect key="frame" x="360" y="100" width="200" height="200"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="pie02.png" translatesAutoresizingMaskIntoConstraints="NO" id="5He-Mu-mpZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="63T-1k-6K7"/>
+                                    <constraint firstAttribute="height" constant="200" id="bqt-4y-124"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="background" destination="5He-Mu-mpZ" id="duP-NL-Mvt"/>
+                                    <outlet property="dialUIView_delegate" destination="BYZ-38-t0r" id="PfK-zg-HIA"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoP-SE-8sP" userLabel="Label1">
+                                <rect key="frame" x="96" y="340" width="89" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="2fO-vg-iyG"/>
+                                    <constraint firstAttribute="height" constant="21" id="Mxv-Ny-wma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRC-PY-YZz" userLabel="Label2">
+                                <rect key="frame" x="416" y="340" width="89" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="3mW-3F-TNn"/>
+                                    <constraint firstAttribute="height" constant="21" id="rit-gx-jq2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wVN-xH-YP2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="0J0-uY-24o"/>
+                            <constraint firstAttribute="trailing" secondItem="e2x-ff-Ulp" secondAttribute="trailing" constant="40" id="MiQ-Ff-40e"/>
+                            <constraint firstItem="wVN-xH-YP2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="W3z-gm-t8c"/>
+                            <constraint firstItem="FoP-SE-8sP" firstAttribute="leading" secondItem="wVN-xH-YP2" secondAttribute="trailing" constant="-144" id="X1X-Ff-rtA"/>
+                            <constraint firstItem="e2x-ff-Ulp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="lGW-HY-cSG"/>
+                            <constraint firstItem="NRC-PY-YZz" firstAttribute="top" secondItem="e2x-ff-Ulp" secondAttribute="bottom" constant="40" id="qIU-z5-Zvr"/>
+                            <constraint firstItem="FoP-SE-8sP" firstAttribute="top" secondItem="wVN-xH-YP2" secondAttribute="bottom" constant="40" id="tLd-Sh-5qX"/>
+                            <constraint firstItem="NRC-PY-YZz" firstAttribute="leading" secondItem="e2x-ff-Ulp" secondAttribute="trailing" constant="-144" id="u1Q-Ck-yeb"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="label1" destination="FoP-SE-8sP" id="071-mk-IHF"/>
+                        <outlet property="label2" destination="NRC-PY-YZz" id="w1V-QU-x6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pie01.png" width="300" height="300"/>
+        <image name="pie02.png" width="300" height="300"/>
+    </resources>
+</document>
