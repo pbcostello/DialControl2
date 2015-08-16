@@ -15,9 +15,11 @@
 @end
 
 @interface DialUIView : UIView
-@property (nonatomic) float rot;
+
 @property (nonatomic) IBOutlet UIImageView *background;
 @property (nonatomic,weak) IBOutlet id<DialUIView_delegate> dialUIView_delegate;
+-(CGFloat) rotation;
+
 @end
 
 

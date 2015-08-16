@@ -9,6 +9,12 @@
 #import "DialUIView.h"
 #define M_PIx2 (M_PI*2)
 
+@interface DialUIView ()
+{
+    CGFloat rotation;
+}
+@end
+
 @implementation DialUIView
 
 -(double) getRadian:(CGPoint) v
@@ -30,8 +36,8 @@
     CGFloat midPtX = self.frame.size.width/2;
     CGFloat midPtY = self.frame.size.height/2;
     
-    double radian1 = fmod ([self getRadian:CGPointMake(v1.x-midPtX,v1.y-midPtY)], M_PIx2);
-    double radian2 = fmod ([self getRadian:CGPointMake(v2.x-midPtX,v2.y-midPtY)], M_PIx2);
+    double radian1 = fmodf ([self getRadian:CGPointMake(v1.x-midPtX,v1.y-midPtY)], M_PIx2);
+    double radian2 = fmodf ([self getRadian:CGPointMake(v2.x-midPtX,v2.y-midPtY)], M_PIx2);
     if (radian1 < radian2)
         radian1 += M_PIx2;
     
@@ -42,8 +48,8 @@
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch1 = [[touches allObjects] objectAtIndex:0];
-    self.rot -= [self getMoveAngle:[touch1 locationInView:self] :[touch1 previousLocationInView:self]];
-    self.background.transform = CGAffineTransformMakeRotation(self.rot);
+    rotation -= [self getMoveAngle:[touch1 locationInView:self] :[touch1 previousLocationInView:self]];
+    self.background.transform = CGAffineTransformMakeRotation(rotation);
     [self.dialUIView_delegate dialUIViewMoved:self];
 }
 
@@ -51,10 +57,14 @@
     self = [super initWithCoder:aDecoder];
     if (self != nil)
     {
-        self.rot = 0;
+        rotation = 0;
     }
     return self;
 };
 
+-(CGFloat) rotation
+{
+    return rotation;
+}
 
 @end

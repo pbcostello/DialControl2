@@ -19,7 +19,7 @@
 -(void) dialUIViewMoved:(DialUIView*)dialUIView
 {
     //show rotation in degrees
-    NSString *rotation = [NSString stringWithFormat:@"%.2f",(dialUIView.rot*(180/M_PI))];
+    NSString *rotation = [NSString stringWithFormat:@"%.2f",(dialUIView.rotation*(180/M_PI))];
     
     switch (dialUIView.tag)
     {
